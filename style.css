@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+background: #f3e8ff;
+min-height: 50vh;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+margin: 80px auto;
+padding: 30px;
+background: #fff;
+border-radius: 18px;
+box-shadow: #580fa6de;
+}
+.welcome-section{
+    text-align: center;
+    padding: 30px;
+}
+.welcome-section h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.welcome-section p{
+    margin: 20px 20px;
+    font-size: small;
+    color: rgba(84, 11, 82, 0.893);
+    line-height: 1.4;
+}
+.welcome-section button{
+    background: #b79fe1;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 25px;
+    border: 1px solid #0c0c0c;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.welcome-section button:hover{
+    background: #c84eca;
+}
+.quiz-section, .result-screen{
+padding: 15px 8px;
+display: none;
+}
+
+/* .answer-options button{
+padding: 5px 5px;
+background-color: rgb(231, 144, 161);
+border: 1px solid black;
+border-radius: 5px;
+color: #fff;
+display: flex;
+margin: 3px; }*/
+.score{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+    margin-bottom: 15px;
+font-size: 10px;
+}
+.progress-area{
+    display: flex;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.quiz-header{
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .progress-bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(221, 224, 227);
+    border-radius: 7px;
+}
+.progress-fill{
+    width: 0% initial;
+    background: #a274f1;
+    border-radius: 7px;
+    transition: width 0.3s ease; }*/
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e9d5ff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #7c3aed;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+.quiz-section h2{
+    font-size: 22px;
+    margin: 25px;
+}
+.answer-options{
+    display: grid;
+    gap: 12px;
+    columns: 2;
+    grid-template-columns: repeat(2, 1fr);
+}
+.answer-options button{
+    background: #fff;
+    border: 0.9px solid lightgrey;
+    padding: 15px;
+    border-radius: 8px;
+}
+.answer-options button:hover{
+    background: #d6acd4;
+    cursor: pointer;
+}
+.answer-options button.selected{
+    background-color: #7c3aed;
+    color: #fff;
+    border: 2px solid #5b21b6;
+}
+.next-btn{
+    background: #c1aee2;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+.next-btn-container{
+display: flex;
+    justify-content: flex-end;
+}
+.result-screen{
+    text-align: center;
+    padding: 30px;
+}
+.result-screen h1{
+    font-size: 42px;
+}
+.result-screen button{
+    background: #c7b1eb;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 9px;
+    border-radius: 8px;
+}
+#result-screen{
+    line-height: 1.5;
+}
+.answer-options button.selected {
+    background-color: #d0b8fb;
+    color: #fff;
+    border: 2px solid #b4b2b7;
+}
+/* Button hover effects */
+.quiz-btn,
+#next-btn,
+#restart-btn {
+    transition: all 0.3s ease;
+}
+
+.quiz-btn:hover,
+#next-btn:hover,
+#restart-btn:hover {
+    background-color: #5b21b6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(124, 58, 237, 0.3);
+}
+
+/* Answer option hover effect */
+.answer-options button {
+    transition: all 0.3s ease;
+}
+
+.answer-options button:hover {
+    background-color: #ede9fe;
+    border-color: #7c3aed;
+    transform: translateY(-2px);
+}
+.quiz-btn:active,
+#next-btn:active,
+#restart-btn:active{
+    transform: scale(0.99);
+}
+@media (max-width: 500px) {
+    .answer-options {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-section,
+    .welcome-section,
+    .result-screen {
+        padding: 20px;
+    }
+
+    .quiz-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .quiz-btn,
+    #next-btn,
+    #restart-btn {
+        width: 100%;
+    }
+}

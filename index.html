@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="main-container">
+        <section class="welcome-section">
+            <h2>Quiz Master</h2>
+            <p class="quiz-intro">Ready to put your web development knowledge to the test? Take this interactive quiz and challenge yourself with questions covering HTML, CSS, and JavaScript. Choose your answers, track your progress, and discover how much you've learned. Whether you're a beginner or sharpening your skills, every question is a chance to learn something new. Good luck!</p>
+            <button class="quiz-btn">Start Quiz</button>
+        </section>
+        <section class="quiz-section">
+            <div class="quiz-header">
+            <p class="progress-area" id="question-counter">Questions 1 of 10</p>
+            <p class="score" id="score-display">score: 0</p>
+        </div>
+<div class="progress-bar">
+    <div class="progress-fill"></div>
+    </div>
+        <h2 id="question-text">Which Language is used to structure webpages?</h2>
+        <div class="answer-options">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JAVASCRIPT</button>
+            <button>Python</button>
+        </div>
+        <br>
+        <div class="next-btn-container"><button class="next-btn" id="next-btn">NEXT</button></div>
+        </section>
+        <section class="result-screen" id="result-screen">
+            <h2>Quiz Completed!</h2>
+            <p>Your final score:</p>
+            <h1 id="final-score">0/10</h1>
+            <p class="performance-message">Great Job!</p>
+            <button id="restart-btn">Restart Quiz</button>
+        </section>
+    </main>
+</body>
+</html>
